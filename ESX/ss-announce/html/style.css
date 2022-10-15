@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+
+:root {
+    --text-color: #efefef;
+    --bg-color: linear-gradient(317deg, rgb(0 180 255) 0%, rgb(1 0 25) 100%);
+    --border-color: #00051b;
+    --font-family: 'Rubik', sans-serif;
+}
+
+* {
+    font-family: var(--font-family);
+}
+
+body {
+    background: transparent;
+}
+
+.container {
+    position: absolute;
+    top: -20vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 20vh;
+}
+
+.textarea {
+    height: 10vh;
+    width: 0vh;
+    position: relative;
+    border: solid 5px var(--border-color);
+    background: var(--bg-color);
+    border-radius: 0px 100px 100px 0px;
+    right: 5vh;
+    z-index: -1;
+    color: var(--text-color);
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+}
+
+marquee {
+    font-size: 2vh;
+}
+
+.text {
+    padding-left: 5vh;
+    padding-right: 1vh;
+}
+
+.in {
+    animation: enter 1s;
+    animation-fill-mode: forwards;
+}
+
+.textareain {
+    animation: changewidthin 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.out {
+    animation: out 1s;
+}
+
+.textareaout {
+    animation: changewidthout 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes enter {
+    from {
+        top: -20vh;
+    }
+
+    to {
+        top: 2vh;
+    }
+}
+
+@keyframes changewidthin {
+    from {
+        width: 0vh;
+    }
+
+    to {
+        width: 100vh;
+    }
+}
+
+@keyframes out {
+    from {
+        top: 2vh;
+    }
+
+    to {
+        top: -20vh;
+    }
+}
+
+@keyframes changewidthout {
+    from {
+        width: 100vh;
+    }
+
+    to {
+        width: 0vh;
+    }
+}
